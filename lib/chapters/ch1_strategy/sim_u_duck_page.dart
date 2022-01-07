@@ -9,20 +9,18 @@ import 'package:ch1_duck_behavior/constants/app_delegates.dart';
 import 'package:ch1_duck_behavior/constants/app_edge_insets.dart';
 import 'package:flutter/material.dart';
 
-class SimUDuckPage extends StatefulWidget {
-  static const String routeName = 'SimUDuckPage';
-  final String title;
+class StrategyPage extends StatefulWidget {
+  static const String routeName = 'Strategy Pattern';
 
-  SimUDuckPage({
+  StrategyPage({
     Key? key,
-    this.title = 'Ch.1: SimUDuck (Стратегия)',
   }) : super(key: key);
 
   @override
-  State<SimUDuckPage> createState() => _SimUDuckPageState();
+  State<StrategyPage> createState() => _StrategyPageState();
 }
 
-class _SimUDuckPageState extends State<SimUDuckPage> {
+class _StrategyPageState extends State<StrategyPage> {
   final List<Duck> ducks = [
     DecoyDuck(),
     MallardDuck(),
@@ -34,7 +32,7 @@ class _SimUDuckPageState extends State<SimUDuckPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text('Ch.1: SimUDuck (Стратегия)')),
       body: (MediaQuery.of(context).size.width >= 400)
           ? GridView.builder(
               padding: EdgeInsets.all(20),
