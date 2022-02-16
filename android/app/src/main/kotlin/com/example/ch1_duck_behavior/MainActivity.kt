@@ -1,4 +1,4 @@
-package com.example.ch1_duck_behavior
+package com.example.head_first_design_patterns
 
 import io.flutter.embedding.android.FlutterActivity
 

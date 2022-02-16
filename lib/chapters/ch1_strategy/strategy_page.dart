@@ -1,13 +1,13 @@
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_card.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/decoy_duck.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/duck.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/mallard_duck.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/model_duck.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/red_head_duck.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/rubber_duck.dart';
-import 'package:ch1_duck_behavior/constants/app_delegates.dart';
-import 'package:ch1_duck_behavior/constants/app_edge_insets.dart';
 import 'package:flutter/material.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_card.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/decoy_duck.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/duck.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/mallard_duck.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/model_duck.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/red_head_duck.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/rubber_duck.dart';
+import 'package:head_first_design_patterns/constants/app_delegates.dart';
+import 'package:head_first_design_patterns/constants/app_edge_insets.dart';
 
 class StrategyPage extends StatefulWidget {
   static const String routeName = 'Strategy Pattern';
@@ -44,7 +44,8 @@ class _StrategyPageState extends State<StrategyPage> {
                   duckModel: duck,
                   margin: EdgeInsets.zero,
                 );
-              })
+              },
+            )
           : ListView.builder(
               itemCount: ducks.length,
               itemBuilder: (context, i) {

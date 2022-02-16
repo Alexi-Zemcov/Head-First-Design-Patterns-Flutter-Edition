@@ -1,8 +1,8 @@
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/duck.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/fly_behavior/fly_behavior.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/fly_behavior/fly_with_wings.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/quack_behavior/quack.dart';
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/quack_behavior/quack_behaviors.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/duck.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/fly_behavior/fly_behavior.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/fly_behavior/fly_with_wings.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/quack_behavior/quack.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/quack_behavior/quack_behavior.dart';
 
 class RedHeadDuck extends Duck {
   RedHeadDuck({

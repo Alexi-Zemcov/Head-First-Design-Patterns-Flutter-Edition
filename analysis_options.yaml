@@ -1,1 +1,144 @@
-import 'package:surf_lint_rules/surf_lint_rules.dart';
+include: package:surf_lint_rules/surf_lint_rules.dart
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+  strong-mode:
+    implicit-casts: false
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+  errors:
+    unawaited_futures: error
+    avoid_void_async: error
+    missing_return: error
+    always_declare_return_types: error
+    invalid_annotation_target: ignore
+
+linter:
+  rules:
+    - directives_ordering
+    - require_trailing_commas
+    - package_api_docs
+    - always_use_package_imports
+    - prefer_interpolation_to_compose_strings
+    - unnecessary_lambdas
+    - avoid_catching_errors
+    - use_to_and_as_if_applicable
+    - use_setters_to_change_properties
+    - avoid_returning_null
+    - avoid_returning_this
+    - omit_local_variable_types
+    - avoid_types_on_closure_parameters
+    - avoid_private_typedef_functions
+    - avoid_positional_boolean_parameters
+    - avoid_equals_and_hash_code_on_mutable_classes
+    - always_declare_return_types
+    - prefer_single_quotes
+    - unawaited_futures
+    - avoid_double_and_int_checks
+    - avoid_escaping_inner_quotes
+    - avoid_field_initializers_in_const_classes
+    - avoid_implementing_value_types
+    - avoid_js_rounded_ints
+    - avoid_returning_null_for_future
+    - avoid_slow_async_io
+    - avoid_unused_constructor_parameters
+    - avoid_void_async
+    - cancel_subscriptions
+    - cascade_invocations
+    - close_sinks
+    - invariant_booleans
+    - leading_newlines_in_multiline_strings
+    - literal_only_boolean_expressions
+    - missing_whitespace_between_adjacent_strings
+    - no_adjacent_strings_in_list
+    - no_runtimeType_toString
+    - parameter_assignments
+    - prefer_asserts_in_initializer_lists
+    - prefer_asserts_with_message
+    - prefer_foreach
+    - sort_child_properties_last
+    - sort_unnamed_constructors_first
+    - test_types_in_equals
+    - throw_in_finally
+    - unnecessary_await_in_return
+    - unnecessary_null_aware_assignments
+    - unnecessary_raw_strings
+    - unnecessary_statements
+    - use_raw_strings
+    - use_string_buffers
+    - prefer_null_aware_method_calls
+    - avoid_bool_literals_in_conditional_expressions
+    - avoid_redundant_argument_values
+    - always_put_control_body_on_new_line
+    - avoid_multiple_declarations_per_line
+    - cast_nullable_to_non_nullable
+    - do_not_use_environment
+    - eol_at_end_of_file
+    - flutter_style_todos
+    - noop_primitive_operations
+    - null_check_on_nullable_type_parameter
+    - prefer_constructors_over_static_methods
+    - prefer_final_in_for_each
+    - prefer_final_locals
+    - prefer_if_elements_to_conditional_expressions
+    - prefer_int_literals
+    - prefer_mixin
+    - tighten_type_of_initializing_formals
+    - type_annotate_public_apis
+    - unnecessary_null_checks
+    - unnecessary_nullable_for_final_variable_declarations
+    - unnecessary_parenthesis
+    - use_if_null_to_convert_nulls_to_bools
+    - use_named_constants
+    - use_is_even_rather_than_modulo
+    - sort_pub_dependencies
+
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting-level: 5
+    number-of-parameters: 4
+    source-lines-of-code: 50
+  metrics-exclude:
+    - test/**
+  rules:
+    #    Flutter specific
+    - always-remove-listener
+    - avoid-returning-widgets
+    - avoid-unnecessary-setstate
+    - avoid-wrapping-in-padding:
+      severity: style
+    - prefer-const-border-radius
+    - prefer-single-widget-per-file:
+        severity: warning
+        ignore-private-widgets: true
+    #    Intl specific
+    - prefer-intl-name
+    - provide-correct-intl-args
+    #    Common
+    - avoid-non-null-assertion
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+    - double-literal-format
+    - member-ordering-extended:
+        order:
+          - constructors
+          - named-constructors
+          - factory-constructors
+    - no-equal-then-else
+    - no-magic-number:
+      severity: style
+    - no-object-declaration
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-trailing-comma
+    - prefer-conditional-expressions
+    - prefer-match-file-name
+    - no-equal-then-else

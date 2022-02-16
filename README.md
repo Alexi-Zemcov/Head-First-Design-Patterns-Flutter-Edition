@@ -1,4 +1,4 @@
-# ch1_duck_behavior
+# head_first_design_patterns
 
 A new Flutter project.
 

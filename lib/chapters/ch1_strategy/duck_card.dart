@@ -1,7 +1,7 @@
-import 'package:ch1_duck_behavior/chapters/ch1_strategy/duck_models/duck.dart';
-import 'package:ch1_duck_behavior/constants/app_decorations.dart';
-import 'package:ch1_duck_behavior/constants/app_edge_insets.dart';
 import 'package:flutter/material.dart';
+import 'package:head_first_design_patterns/chapters/ch1_strategy/duck_models/duck.dart';
+import 'package:head_first_design_patterns/constants/app_decorations.dart';
+import 'package:head_first_design_patterns/constants/app_edge_insets.dart';
 
 class DuckCard extends StatelessWidget {
   const DuckCard({
@@ -28,19 +28,19 @@ class DuckCard extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           ElevatedButton(
-            child: Text('Make Sound'),
             onPressed: duckModel.performQuack,
+            child: Text('Make Sound'),
           ),
           ElevatedButton(
-            child: Text('Perform Fly'),
             onPressed: duckModel.performFly,
+            child: Text('Perform Fly'),
           ),
           OutlinedButton(
+            onPressed: duckModel.swim,
             child: Text(
               'Perform Swim',
               style: Theme.of(context).textTheme.button,
             ),
-            onPressed: duckModel.swim,
           ),
         ],
       ),
